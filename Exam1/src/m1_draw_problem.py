@@ -105,6 +105,13 @@ def draw_a_picture(point, n, color, window):
         picture.attach_to(window)
         window.render(0.5)
 
+    for k in range (4):
+        point2 = rg.Point(50 + (k * 25), 250 + (k * 15))
+        picture2 = rg.Circle(point2, 50)
+        picture2.fill_color = 'green'
+        picture2.attach_to(window)
+        window.render(0.5)
+
     return
 
 
