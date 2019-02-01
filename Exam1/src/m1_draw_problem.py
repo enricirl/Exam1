@@ -95,7 +95,16 @@ def test_draw_a_picture():
 #
 
 def draw_a_picture(point, n, color, window):
-
+    window = rg.RoseWindow(400, 400)
+    total=0
+    for k in range(18):
+        total = total + (n - 1)
+        point = rg.Point(50+(k*25), 50-(k*15) )
+        picture = rg.Circle(point, 50)
+        picture.fill_color = 'blue'
+        picture.attach_to(window)
+        window.render(0.5)
+        window.close_on_mouse_click()
     return
 
 
